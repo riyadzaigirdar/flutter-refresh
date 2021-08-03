@@ -19,7 +19,6 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   List<Post>? post;
-  ScrollController _controller = ScrollController();
   bool loading = true;
 
   @override
@@ -51,7 +50,6 @@ class _HomeState extends State<Home> {
                 setState(() {});
               },
               child: ListView.builder(
-                  controller: _controller,
                   itemCount: post?.length,
                   itemBuilder: (context, index) {
                     return ListTile(
